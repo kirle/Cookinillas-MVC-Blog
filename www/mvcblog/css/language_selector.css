@@ -1,0 +1,12 @@
+#flag 
+{
+    height: 20px;
+    width: 20px; /* may not be necessary */
+    margin: 10px;
+}
+
+#flag:hover{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}

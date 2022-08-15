@@ -1,0 +1,136 @@
+/* Add form css file */
+
+#title{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 4vh;
+}
+
+#form-container{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#selected-ingredients{
+    background-color:rgba(209, 253, 245, 0.8);
+    border-radius: 20px;
+    overflow-y: scroll;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: top;
+}
+
+#selected-ingredients-container{
+    width: 100%;
+}
+
+
+
+
+#selected-ingredient{
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
+
+}
+#selected-ingredient:hover{
+    background-color: rgba(141, 255, 202, 0.8);
+}
+
+#selected-ingredient-right{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+    visibility: hidden;
+}
+
+#plus_icon_container{
+    text-align: center;
+}
+#amount-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+}
+#selected-ingredient-right button{
+    border-radius: 15px;
+}
+.glyphicon{
+    border-radius: 25px;
+}
+
+/*Fancy buttons */
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: #d4e0dc;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #d4e0dc;
+}
+.button:hover {background-color: #3e8e41}
+
+
+.button:active {
+    background-color: #42c546;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.button-red:hover{
+    background-color: #c75050a2;
+}
+
+.button-red:active{
+    background-color: #e80000;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+
+}
+
+#selected-ingredient:hover #selected-ingredient-right{
+    visibility: visible;
+    animation-name: fadeInLeft;
+    -webkit-animation-duration: 0.5s;
+}
+
+#addnew{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    flex-direction: column;
+}
+
+#form-add{
+    width: fit-content;
+}
+
+#actions-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    flex-direction: row;
+}

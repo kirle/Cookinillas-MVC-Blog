@@ -1,0 +1,192 @@
+/* Alert flash animation */
+@keyframes backgroundflash {		
+		75% { opacity:1.0}
+		100% {opacity:0.0; display:none}
+}
+
+/* Fade in animation */
+@-webkit-keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateX(0);
+    }
+ }
+ 
+ @keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+
+body{
+    /* height: 100%; */
+    background: url(../static/images/background.jpg)  ;
+    background-size: 100%;
+
+}
+.main-page-header{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    margin-bottom: 5vh;
+}
+
+/* +++++
+Cards css 
++++++ */
+
+#cards-container{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    display: flex;
+    flex-direction: column;  
+    background-color: rgba(255, 255, 255, 0.6);   
+}
+.card-text{
+    font-size: 11pt;
+}
+
+#recipe-card:hover .btn {
+    visibility:visible;
+}
+
+#card-actions{
+    display: none;
+    visibility: hidden;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+}
+
+#recipe-card:hover #card-actions{
+    display: block;
+    visibility: visible;
+    -webkit-animation-name: fadeInLeft;
+         animation-name: fadeInLeft;
+}
+#recipe-card:hover{
+    background-color: rgba(206, 206, 206, 0.3);
+    box-shadow: 10px -0px rgb(82, 141, 141);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    cursor: pointer;
+}
+.recipe-card:hover .btn {
+    color: #fff;
+    background-color: #000;
+}
+/*Card image */ 
+#imageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#recipe-card:hover #imageContainer img{
+    margin-top: 2vh;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+
+/* Icons navbar css */
+.glyphicon{
+    font-size: 20pt;
+    margin: 2vh;
+    height: 4vh;
+}
+.glyphicon:hover{
+    background-color: rgba(235, 235, 235, 0.3); 
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+#fav-count-container{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+#fav-count-container #favCount{
+    margin-left: 1vh;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-duration: 0.5s;
+}
+
+
+/* Footer navbar css */
+#language-selector{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+#language-selector:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+/**Top recipes bar**/
+#searchLabel{
+    width: fit-content;
+} 
+
+#headerContainerCenter{
+    display: flex;
+    
+}
+
+
+/* Errors and alerts */ 
+#flash {
+	animation: backgroundflash 5s forwards; 
+} 
+#hidden{
+    display: none;
+}
+
+
+
+/* view css */
+#fav-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    height: 50%;
+    margin: 0 auto;
+}
+
+#nav-container .glyphicon {
+    transition: transform .2s; /* Animation */
+
+}
+
+#nav-container .glyphicon:hover {
+    transform: scale(1.5); 
+}
+
+.btn{
+    transition: transform .2s; /* Animation */
+
+}
+.btn:hover{
+    transform: scale(1.2); 
+}
+.help-block{
+	color: rgb(223, 118, 92);
+    
+}
